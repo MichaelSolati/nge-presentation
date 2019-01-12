@@ -7,10 +7,7 @@ Vue.config.productionTip = false;
 
 Vue.config.ignoredElements = [
   'nge-slides-wrapper',
-  'nge-slide-title',
-  'nge-slide-section',
   'nge-slide',
-  'nge-slide-blank',
   'nge-slides-progress-bar',
 ];
 
