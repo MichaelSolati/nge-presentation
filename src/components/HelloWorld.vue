@@ -9,8 +9,9 @@
       :content="slide.content"
       :background-image="slide.background"
     >
-      <div v-if="slide.inline && !slide.code" v-html="slide.inline"></div>
-      <juicy-ace-editor v-if="slide.inline && slide.code" fontSize="28px" theme="ace/theme/monokai" :mode="'ace/mode/'+slide.code" class="full-height">{{ slide.inline }}</juicy-ace-editor>
+      <div v-if="slide.inline" v-html="slide.inline"></div>
+      <br v-if="slide.codeContent && slide.code && slide.inline">
+      <juicy-ace-editor v-if="slide.codeContent && slide.code" fontSize="28px" theme="ace/theme/monokai" :mode="'ace/mode/'+slide.code" class="full-height">{{ slide.codeContent }}</juicy-ace-editor>
     </nge-slide>
     <nge-slides-progress-bar></nge-slides-progress-bar>
   </nge-slides-wrapper>
@@ -102,7 +103,7 @@ export default class HelloWorld extends Vue {
     },
     {
       title: 'CSS Library (Bootstrap)',
-      inline: `<head>
+      codeContent: `<head>
   <!-- Required meta tags -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -143,7 +144,7 @@ export default class HelloWorld extends Vue {
     },
     {
       title: 'JS Magic (Google Maps)',
-      inline: `<head>
+      codeContent: `<head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- Google Maps -->
@@ -242,16 +243,123 @@ export default class HelloWorld extends Vue {
     },
     {
       type: 'section',
+      title: 'How Do We Create Custom Elements?'
+    },
+    {
+      codeContent: `// ES6 Class That Extends HTMLElement
+class HelloWorld extends HTMLElement {
+  // We Can Have Attributes And Listen To Changes
+  static observedAttributes = ['name'];
+  attributeChangesCallback(key, oldVal, newVal) {}
+
+  // We Have Lifecycle Hooks
+  connectedCallBack(){}
+  disconnectedCallBack(){}
+
+  // We Can Get And Set Properties
+  set name(val) {}
+  get name() {}
+
+  // We Can Also Dispatch Events!!!!
+  onClick() {
+    this.dispatchEvent(new CustomEvent('nameChange', {}));
+  }
+}
+
+// Register to the Browser from \`customElements\` API
+customElements.define('hello-world', HelloWorld);`,
+      code: 'javascript'
+    },
+    {
+      inline: `
+        <div class="full-width">
+          <div class="take-space">
+            <h4>Tools To Build Custom Elements</h4>
+            <div class="flex-center">
+              <div class="take-space flex-center">
+                <img src="${require('@/assets/polymer.png')}" alt="Polymer Logo" height="200px">
+              </div>
+              <div class="take-space flex-center">
+                <img src="${require('@/assets/stencil.png')}" alt="Stencil Logo" height="200px">
+              </div>
+            </div>
+          </div>
+          <div class="take-space">
+            <h4>Custom Element Libraries</h4>
+            <div class="flex-center">
+              <div class="take-space flex-center">
+                <img src="${require('@/assets/vaadin.svg')}" alt="Vaadin Logo" height="200px">
+              </div>
+              <div class="take-space flex-center">
+                <img src="${require('@/assets/ionic.png')}" alt="Ionic Logo" height="200px">
+              </div>
+            </div>
+          </div>
+        </div>
+      `
+    },
+    {
+      title: 'Deja vu?',
+      force: true,
+      inline: `
+      <div class='flex-center white'>
+        <div class='flex-center margin take-space'>
+          <vaadin-button onclick="alert('You clicked me')">Click Me!</vaadin-button>
+        </div>
+        <div class='flex-center margin take-space'>
+          <vaadin-date-picker label="IT'S TODAY!!!" value="${(new Date()).toISOString().split('T')[0]}">
+            </vaadin-date-picker>
+        </div>
+      </div>
+      `,
+      codeContent: `<div class='flex-center white'>
+  <div class='flex-center margin take-space'>
+    <vaadin-button onclick="alert('You clicked me')">Click Me!</vaadin-button>
+  </div>
+  <div class='flex-center margin take-space'>
+    <vaadin-date-picker label="IT'S TODAY!!!" value="${(new Date()).toISOString().split('T')[0]}">
+      </vaadin-date-picker>
+  </div>
+</div>`,
+      code: 'html'
+    },
+    {
+      type: 'section',
+      title: 'But wait, I thought this was about Angular?'
+    },
+    {
+      background: require(`@/assets/just-do-it.webp`)
+    },
+    {
+      type: 'section',
       title: 'So we put some elements inside your elements!',
       background: require(`@/assets/yo-dawg-grey.jpg`)
     },
     {
-      type: 'section',
-      title: 'WEB COMPONENTS FTW!',
-      subtitle: null,
-      content: null,
-      inline: null,
-      background: null
+      background: require(`@/assets/questions.gif`)
+    },
+    {
+      inline: `
+        <br>
+        <br>
+        <br>
+        <div class="flex-center">
+          <div>
+            <div class="flex-center">
+              <h3>I'm On The Web</h3>
+            </div>
+            <div class="flex-center">
+              <img src="${require('@/assets/github.png')}" alt="GitHub Logo" height="200px">
+              <img src="${require('@/assets/linkedin.png')}" alt="LinkedIn Logo" height="200px">
+              <img src="${require('@/assets/medium.png')}" alt="Medium Logo" height="200px">
+              <img src="${require('@/assets/twitter.png')}" alt="Twitter Logo" height="200px">
+            </div>
+            <div class="flex-center">
+              <h3>@MichaelSolati</h3>
+            </div>
+          </div>
+        </div>
+      `
     },
   ];
 }
