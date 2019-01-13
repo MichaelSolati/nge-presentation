@@ -9,7 +9,6 @@
   },
   "dependencies": {
     "@vaadin/vaadin": "^12.0.3",
-    "coffeekraken-s-codemirror-component": "^1.0.7",
     "nge-slides": "^0.1.2",
     "register-service-worker": "^1.5.2",
     "vue": "^2.5.21",

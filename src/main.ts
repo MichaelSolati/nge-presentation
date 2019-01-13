@@ -3,7 +3,6 @@ import App from './App.vue';
 import './registerServiceWorker';
 import '@vaadin/vaadin-button';
 import '@vaadin/vaadin-date-picker';
-import 'coffeekraken-s-codemirror-component';
 import 'nge-slides';
 
 Vue.config.productionTip = false;
