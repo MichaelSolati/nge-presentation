@@ -1,17 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>nge-presentation</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but nge-presentation doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+  <title>nge-presentation</title>
+
+  <style lang="css">
+    .flex-center {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .take-space {
+      width: -webkit-fill-available;
+    }
+
+    .margin {
+      margin: 32px;
+    }
+
+    .white {
+      background-color: white;
+    }
+
+    .full-height {
+      height: -webkit-fill-available;
+    }
+
+    .round-img {
+      border-radius: 50%;
+    }
+
+    *.nge-slides.slide {
+      background-color: #212121 !important;
+    }
+
+    *.nge-slides.text {
+      color: white !important;
+    }
+
+    *.nge-slides.content {
+      font-size: 3rem !important;
+      font-weight: normal !important;
+      letter-spacing: 0rem !important;
+    }
+
+    s-codemirror {
+      font-size: 1.5rem !important;
+      font-weight: normal !important;
+      letter-spacing: 0rem !important;
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but nge-presentation doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <!-- built files will be auto injected -->
+</body>
+
 </html>
