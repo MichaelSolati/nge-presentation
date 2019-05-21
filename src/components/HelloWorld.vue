@@ -336,6 +336,15 @@ customElements.define('hello-world', HelloWorld);`,
       background: require(`@/assets/yo-dawg-grey.jpg`)
     },
     {
+      type: 'section',
+      title: 'https://bit.ly/AngularElements'
+    },
+    {
+      inline: `
+        <typeform-standard url="https://michaelsolati.typeform.com/to/F7Cu8z"></typeform-standard>
+      `
+    },
+    {
       background: require(`@/assets/questions.gif`)
     },
     {

@@ -12,6 +12,7 @@
     "@vaadin/vaadin": "^13.0.7",
     "nge-slides": "^0.2.1",
     "register-service-worker": "^1.6.2",
+    "typeform-elements": "^0.2.2",
     "vue": "^2.6.10",
     "vue-class-component": "^7.1.0",
     "vue-property-decorator": "^8.1.1"

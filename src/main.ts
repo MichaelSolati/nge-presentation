@@ -4,6 +4,7 @@ import './registerServiceWorker';
 import '@vaadin/vaadin-button';
 import '@vaadin/vaadin-date-picker';
 import 'nge-slides';
+import 'typeform-elements/dist/embed';
 
 Vue.config.productionTip = false;
 
