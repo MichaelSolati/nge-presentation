@@ -17,6 +17,13 @@
   </nge-slides-wrapper>
 </template>
 
+<style>
+  .nope {
+    text-decoration: line-through;
+  }
+</style>
+
+
 <script lang='ts'>
 import { Component, Prop, Vue } from 'vue-property-decorator';
 
@@ -39,13 +46,14 @@ export default class HelloWorld extends Vue {
           <ul>
             <li>Frontend Developer
               <ul>
-                <li>3 years total</li>
-                <li>2 years of Angular</li>
+                <li>5 years total</li>
+                <li>3 years of Angular</li>
               </ul>
             </li>
             <li>Drinker of coffee</li>
             <li>Lover of memes</li>
             <li>Developer 🥑 @ Typeform</li>
+            <li>Google Developer Expert</li>
           </ul>
         </div>
       </div>
@@ -200,7 +208,7 @@ export default class HelloWorld extends Vue {
             <li>Custom Elements</li>
             <li>HTML Templates</li>
             <li>Shadow DOM</li>
-            <li>HTML Imports</li>
+            <li class="nope">HTML Imports</li>
           </ul>
         </div>
       </div>
@@ -360,7 +368,7 @@ customElements.define('hello-world', HelloWorld);`,
             <div class="flex-center">
               <img src="${require('@/assets/github.png')}" alt="GitHub Logo" height="200px">
               <img src="${require('@/assets/linkedin.png')}" alt="LinkedIn Logo" height="200px">
-              <img src="${require('@/assets/medium.png')}" alt="Medium Logo" height="200px">
+              <img src="${require('@/assets/dev.to.svg')}" alt="DEV.to Logo" height="200px">
               <img src="${require('@/assets/twitter.png')}" alt="Twitter Logo" height="200px">
             </div>
             <div class="flex-center">
