@@ -12,6 +12,7 @@ Vue.config.ignoredElements = [
   'nge-slides-wrapper',
   'nge-slide',
   'nge-slides-progress-bar',
+  'juicy-ace-editor'
 ];
 
 new Vue({

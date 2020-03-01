@@ -30,18 +30,17 @@ import { Component, Prop, Vue } from 'vue-property-decorator';
 @Component
 export default class HelloWorld extends Vue {
   public handle = '@MichaelSolati';
-  public hashtag = '#AngularElements';
+  public hashtag = '#CustomElements';
   public slides = [
     {
       type: 'title',
-      title: 'Yo Dawg, I Heard You Like (Angular) Components',
-      subtitle: 'Web Components With Angular'
+      title: 'Yo Dawg, I Heard You Like Components',
     },
     {
       title: 'About Me',
       inline: `
       <div class='flex-center'>
-        <img src='${require(`@/assets/michael.png`)}' alt='Picture of Michael' height='400px' class='margin round-img'>
+        <img src='${require(`@/assets/michael.jpg`)}' alt='Picture of Michael' height='400px' class='margin round-img'>
         <div class='margin take-space'>
           <ul>
             <li>Frontend Developer
@@ -52,8 +51,11 @@ export default class HelloWorld extends Vue {
             </li>
             <li>Drinker of coffee</li>
             <li>Lover of memes</li>
-            <li>Developer 🥑 @ Typeform</li>
-            <li>Google Developer Expert</li>
+            <li>Developer Program Engineer @ Google
+              <ul>
+                <li>web.dev</li>
+              </ul>
+            </li>
           </ul>
         </div>
       </div>
@@ -333,7 +335,7 @@ customElements.define('hello-world', HelloWorld);`,
     },
     {
       type: 'section',
-      title: 'But wait, I thought this was about Angular?'
+      title: 'But wait, how can I do that?'
     },
     {
       background: require(`@/assets/just-do-it.webp`)
@@ -345,11 +347,11 @@ customElements.define('hello-world', HelloWorld);`,
     },
     {
       type: 'section',
-      title: 'https://bit.ly/AngularElements'
+      title: 'https://bit.ly/BlinkTwo'
     },
     {
       inline: `
-        <typeform-standard url="https://michaelsolati.typeform.com/to/F7Cu8z"></typeform-standard>
+        <typeform-widget url="https://michaelsolati.typeform.com/to/F7Cu8z"></typeform-widget>
       `
     },
     {
