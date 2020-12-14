@@ -11,7 +11,7 @@
     >
       <div v-if="slide.inline" v-html="slide.inline"></div>
       <br v-if="slide.codeContent && slide.code && slide.inline">
-      <juicy-ace-editor v-if="slide.codeContent && slide.code" fontSize="28px" theme="ace/theme/monokai" :mode="'ace/mode/'+slide.code" class="full-height">{{ slide.codeContent }}</juicy-ace-editor>
+      <juicy-ace-editor v-if="slide.codeContent && slide.code" fontSize="28px" theme="ace/theme/monokai" :mode="'ace/mode/'+slide.code" class="height-80">{{ slide.codeContent }}</juicy-ace-editor>
     </nge-slide>
     <nge-slides-progress-bar></nge-slides-progress-bar>
   </nge-slides-wrapper>

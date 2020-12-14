@@ -5,25 +5,23 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "deploy": "firebase deploy"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "@vaadin/vaadin": "^14.1.17",
+    "@vaadin/vaadin": "^17.0.11",
     "juicy-ace-editor": "^2.0.5",
-    "nge-slides": "^0.2.1",
-    "register-service-worker": "^1.6.2",
-    "typeform-elements": "^1.0.0",
-    "vue": "^2.6.11",
-    "vue-class-component": "^7.2.3",
-    "vue-property-decorator": "^8.4.0"
+    "nge-slides": "^0.3.0",
+    "register-service-worker": "^1.7.2",
+    "typeform-elements": "^1.1.1",
+    "vue": "^2.6.12",
+    "vue-class-component": "^7.2.6",
+    "vue-property-decorator": "^9.1.2"
   },
   "devDependencies": {
-    "@vue/cli-plugin-pwa": "^4.2.3",
-    "@vue/cli-plugin-typescript": "^4.2.3",
-    "@vue/cli-service": "^4.2.3",
-    "firebase-tools": "^7.14.0",
-    "typescript": "^3.8.3",
-    "vue-template-compiler": "^2.6.11"
+    "@vue/cli-plugin-pwa": "^4.5.9",
+    "@vue/cli-plugin-typescript": "^4.5.9",
+    "@vue/cli-service": "^4.5.9",
+    "typescript": "^4.1.3",
+    "vue-template-compiler": "^2.6.12"
   }
 }
